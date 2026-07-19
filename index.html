@@ -98,53 +98,53 @@
             border-left: 6px solid #0371a4;
             margin-top: 20px;
     
-    /* 1. Alineación a la izquierda */
-    text-align: left; 
+            /* 1. Alineación a la izquierda */
+            text-align: left; 
 
-    /* 2. Transición suave para el efecto de crecimiento */
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
+            /* 2. Transición suave para el efecto de crecimiento */
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
 
-/* 3. Efecto al pasar el mouse (Hover) */
-.card:hover {
-    transform: scale(1.03); /* Crece un 3% */
-    box-shadow: 0 10px 25px rgba(113, 38, 187, 0.2); /* Sombra más profunda y morada */
-    cursor: pointer;
-}
+        /* 3. Efecto al pasar el mouse (Hover) */
+        .card:hover {
+            transform: scale(1.03); /* Crece un 3% */
+            box-shadow: 0 10px 25px rgba(113, 38, 187, 0.2); /* Sombra más profunda y morada */
+            cursor: pointer;
+        }
 
-/* Configuramos la tarjeta como un contenedor Flex */
-.tarjeta-semana {
-    display: flex;
-    gap: 20px; /* Espacio entre el PDF y el texto */
-    align-items: flex-start; /* Alinea el contenido arriba */
-}
+        /* Configuramos la tarjeta como un contenedor Flex */
+        .tarjeta-semana {
+            display: flex;
+            gap: 20px; /* Espacio entre el PDF/Video y el texto */
+            align-items: flex-start; /* Alinea el contenido arriba */
+        }
 
-/* El PDF ocupará el 50% del ancho */
-.pdf-container {
-    flex: 1; 
-    min-width: 300px;
-}
+        /* El PDF ocupará el 50% del ancho */
+        .pdf-container {
+            flex: 1; 
+            min-width: 300px;
+        }
 
-/* El texto ocupará el otro 50% */
-.texto-container {
-    flex: 1;
-}
+        /* El texto ocupará el otro 50% */
+        .texto-container {
+            flex: 1;
+        }
 
-/* El PDF y el Video ocuparán el mismo espacio proporcional */
-.pdf-container, .video-container {
-    flex: 1; 
-    min-width: 300px;
-}
+        /* El PDF y el Video ocuparán el mismo espacio proporcional */
+        .pdf-container, .video-container {
+            flex: 1; 
+            min-width: 300px;
+        }
 
-/* Responsive: Si la pantalla es pequeña (celular), se pone uno abajo del otro */
-@media (max-width: 768px) {
-    .tarjeta-semana {
-        flex-direction: column;
-    }
-    .pdf-container {
-        width: 100%;
-    }
-}
+        /* Responsive: Si la pantalla es pequeña (celular), se pone uno abajo del otro */
+        @media (max-width: 768px) {
+            .tarjeta-semana {
+                flex-direction: column;
+            }
+            .pdf-container, .video-container {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -154,40 +154,73 @@
     </header>
 
     <main>
-
         
-    <div class="card tarjeta-semana">
-    <div class="pdf-container">
-        <embed src="Introducción Arduino SDEM.pdf" type="application/pdf" width="100%" height="400px" />
-    </div>
+        <!-- Semana 1 -->
+        <div class="card tarjeta-semana">
+            <div class="pdf-container">
+                <embed src="Introducción Arduino SDEM.pdf" type="application/pdf" width="100%" height="400px" />
+            </div>
+            <div class="texto-container">
+                <h3>S1 Introducción a Arduino</h3>
+                <p>Arduino es una plataforma de código abierto que está basada en hardware y software.</p>
+                <ul>
+                    <li>Tipos de Arduinos</li>
+                    <li>Partes del Arduino UNO</li>
+                </ul>
+            </div>
+        </div>
+            
+        <!-- Semana 2 -->
+        <div class="card tarjeta-semana">
+            <div class="video-container">
+                <video controls width="100%">
+                    <source src="tinkercad.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="texto-container">
+                <h3>S2 Circuitos en TinkerCad</h3>
+                <p>TinkerCad es un software para simular circuitos, programar y realizar modelado 3D.</p>
+                <ul>
+                    <li>Encender led.</li>
+                    <li>Encender RGB.</li>
+                </ul>
+            </div>
+        </div>
 
-    <div class="texto-container">
-        <h3>S1 Introducción a Arduino</h3>
-        <p>Arduino es una plataforma de código abierto que está basada en hardware y software.</p>
-        <ul>
-            <li>Tipos de Arduinos</li>
-            <li>Partes del Arduino UNO</li>
-        </ul>
-    </div>
-    </div>
+        <!-- Semana 4 (Nueva) -->
+        <div class="card tarjeta-semana">
+            <div class="video-container">
+                <video controls width="100%">
+                    <source src="video_semana4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="texto-container">
+                <h3>Semana 4: Circuito de 3 LEDS</h3>
+                <p>Descripción o resumen de los temas aprendidos durante la cuarta semana de clases.</p>
+                <ul>
+                    <li>Punto clave 1 o proyecto realizado.</li>
+                    <li>Punto clave 2 o herramientas usadas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Semana 5 (Nueva) -->
+        <div class="card tarjeta-semana">
+            <div class="video-container">
+                <video controls width="100%">
+                    <source src="video_semana5.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="texto-container">
+                <h3>Semana 5: Circuito</h3>
+                <p>Descripción o resumen de los temas aprendidos durante la quinta semana de clases.</p>
+                <ul>
+                    <li>Punto clave 1 o proyecto realizado.</li>
+                    <li>Punto clave 2 o herramientas usadas.</li>
+                </ul>
+            </div>
+        </div>
         
-    <div class="card tarjeta-semana">
-    <div class="video-container">
-        <video controls width="100%">
-            <source src="tinkercad.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="texto-container">
-        <h3>S2 Circuitos en TinkerCad</h3>
-        <p>TinkerCad es un software para simular circuitos, programar y realizar modelado 3D.</p>
-        <ul>
-            <li>Encender led.</li>
-            <li>Encender RGB.</li>
-        </ul>
-    </div>
-    </div>
-    
     </main>
 
     <footer>
